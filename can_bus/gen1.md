@@ -5,7 +5,7 @@
 Besides the CAN pins in the OBD-II port, there is a CAN bus male port hidden
 behind the car multimedia head unit:
 
-![Hidden CAN port](images/ft86_hidden_can_connector.jpg)
+![Hidden CAN port](../images/ft86_hidden_can_connector.jpg)
 
 It's very close to the glovebox, which makes it great for putting your CAN
 reader in the glovebox. Such a placement makes sure it's out of the way and you
@@ -18,7 +18,7 @@ You can use the two middle pins of a
 [Toyota radio harness](https://www.amazon.com/gp/product/B0002BEQJ8)
 to connect to the CAN bus in a reliable way.
 
-![CAN socket wiring](images/ft86_socket_wiring.jpg)
+![CAN socket wiring](../images/ft86_socket_wiring.jpg)
 
 It's recommended to use a ~60–90 cm (2–3') twisted pair cable between that port
 and your CAN reader.
