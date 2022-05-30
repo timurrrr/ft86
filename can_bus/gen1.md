@@ -1,4 +1,4 @@
-# CAN bus
+# CAN bus (2013-2020 model years)
 
 ## Connections
 
