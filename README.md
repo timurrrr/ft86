@@ -13,7 +13,7 @@ TODO: notes on DIY track day maintenance
 
 [CAN bus mapping for 2013-2020 model years](/can_bus/gen1.md)
 
-[CAN bus mapping for 2022+](/can_bus/gen1.md)
+[CAN bus mapping for 2022+](/can_bus/gen2.md)
 
 ## Support the project
 
