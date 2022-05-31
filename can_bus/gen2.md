@@ -1,5 +1,8 @@
 # CAN bus (2022 model year)
 
+Special thanks to Ken Houseal for his early legwork on finding and documenting
+how to connect to the CAN bus, and finding some of these data mappings!
+
 ## Connections
 
 The ODB-II in the driver's footwell no longer exposes the CAN bus data except
