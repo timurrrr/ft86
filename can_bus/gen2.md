@@ -9,9 +9,10 @@ The ODB-II in the driver's footwell no longer exposes the CAN bus data except
 for OBD-II requests. If you want to log data with high refresh rates, you need
 to use an alternative connection.
 
-A common place to get data is the ASC (a.k.a. "fake engine noise") female
-connector. It is located inside the dash slightly to the right of the glovebox,
-and is accessible by pulling off the panel on the right side of the dash.
+A common place to get access to the CAN bus is the ASC (a.k.a. "fake engine
+noise") female connector. It is located inside the dash slightly to the right of
+the glovebox, and is accessible by pulling off the panel on the right side of
+the dash.
 
 ![Location of the connector](../images/gen2_asc_connector_access.jpg)
 
