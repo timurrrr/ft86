@@ -12,9 +12,12 @@ to use an alternative connection.
 A common place to get access to the CAN bus is the ASC (a.k.a. "fake engine
 noise") female connector. It is located inside the dash slightly to the right of
 the glovebox, and is accessible by pulling off the panel on the right side of
-the dash.
+the dash. The photo below shows the normal location of the connector with an
+arrow, and you can see the disconnected connector dangling in the bottom right
+of the photo:
 
-![Location of the connector](../images/gen2_asc_connector_access.jpg)
+<img src="../images/gen2_asc_connector_access.jpg"
+  alt="Location of the connector" width="500" height="500" />
 
 You can then buy a male connector by TE Connectivity, part number 1376106-1.
 You will also need to buy male pins, part number 1376109-1.
