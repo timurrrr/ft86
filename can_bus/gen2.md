@@ -72,6 +72,8 @@ Channel name | Equation | Notes
 ------------ | -------- | -----
 Engine RPM | `bitsToUIntLe(raw, 16, 14)` |
 Accelerator position | `E / 2.55` |
+Accelerator position | `F / 2.55` | Seems to always have the same value as `E`
+Accelerator position | `G / 2.55` | Seems to always have the same value as `E`
 
 ### CAN ID 0x41 (65)
 
