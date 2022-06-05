@@ -44,7 +44,7 @@ Note that the "equation" column in the decoding tables uses the
 For example, if the data is\
 `0x 12 34 56 78 90 AB CD EF`\
 where bytes are named\
-`   A  B  C  D  E  F  G  H`,\
+`-- (A)(B)(C)(D)(E)(F)(G)(H)`,\
 then here is how different equations are calculated:
 
 Equation | Value (hex) | Value (dec)
