@@ -79,7 +79,7 @@ Update frequency: 100 times per second.
 
 Example values:\
 `0x C9 43 96 A6 7B 27 65 02` (parked)\
-`0x 94 4E 44 A7 78 27 7B 00` (moving slowly)\
+`0x 94 4E 44 A7 78 27 7B 00` (moving slowly)
 
 ### CAN ID 0x118 (280)
 
@@ -87,7 +87,7 @@ Update frequency: 50 times per second.
 
 Example values:\
 `0x 7E 0F 00 07 00 4F 00 00` (parked)\
-`0x 8C 02 00 21 00 50 00 00` (moving slowly)\
+`0x 8C 02 00 21 00 50 00 00` (moving slowly)
 
 ### CAN ID 0x138 (312)
 
@@ -95,7 +95,7 @@ Update frequency: 50 times per second.
 
 Example values:\
 `0x 28 0C DD 06 00 00 00 00` (parked)\
-`0x 90 0D 13 FA 3F 00 00 00` (moving slowly)\
+`0x 90 0D 13 FA 3F 00 00 00` (moving slowly)
 
 Channel name | Equation | Notes
 ------------ | -------- | -----
@@ -108,7 +108,7 @@ Update frequency: 50 times per second.
 
 Example values:\
 `0x 72 5A 00 E0 08 00 DA 1C` (parked)\
-`0x 62 5B FC E0 08 00 CD 1C` (moving slowly)\
+`0x 62 5B FC E0 08 00 CD 1C` (moving slowly)
 
 Channel name | Equation | Notes
 ------------ | -------- | -----
@@ -121,7 +121,7 @@ Update frequency: 50 times per second.
 
 Example values:\
 `0x 47 0F 00 00 FF FF FF FF` (parked)\
-`0x 37 02 00 00 FF FF FE FD` (moving slowly)\
+`0x 37 02 00 00 FF FF FE FD` (moving slowly)
 
 ### CAN ID 0x13C (316)
 
@@ -129,7 +129,7 @@ Update frequency: 50 times per second.
 
 Example values:\
 `0x D4 0F 0E 38 02 00 40 00` (parked)\
-`0x 12 0E 00 0B 0E 42 6C 00` (moving slowly)\
+`0x 12 0E 00 0B 0E 42 6C 00` (moving slowly)
 
 ### CAN ID 0x143 (323)
 
@@ -137,7 +137,7 @@ Update frequency: 50 times per second.
 
 Example values:\
 `0x 51 0D 00 00 00 00 00 00` (parked)\
-`0x 5C 07 00 10 01 00 00 00` (moving slowly)\
+`0x 5C 07 00 10 01 00 00 00` (moving slowly)
 
 Channel name | Equation | Notes
 ------------ | -------- | -----
@@ -149,7 +149,7 @@ Update frequency: 50 times per second.
 
 Example values:\
 `0x 7C 1B CE 42 09 01 00 00` (parked)\
-`0x 19 11 68 48 11 00 00 00` (moving slowly)\
+`0x 19 11 68 48 11 00 00 00` (moving slowly)
 
 ### CAN ID 0x2D2 (722)
 
@@ -157,7 +157,7 @@ Update frequency: 33.3 times per second.
 
 Example values:\
 `0x 3A 06 40 00 20 00 00 00` (parked)\
-`0x 3E 02 48 00 20 00 00 00` (moving slowly)\
+`0x 3E 02 48 00 20 00 00 00` (moving slowly)
 
 ### CAN ID 0x345 (837)
 
