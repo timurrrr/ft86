@@ -35,7 +35,138 @@ Here's how you should wire the male connector:
 
 ## Details on some CAN IDs
 
-TODO
+Below are the examples of some high-frequency CAN IDs, along with some of the
+data channels that have already been decoded.
+
+Note that the "equation" column in the decoding tables uses the
+[RaceChrono equation format](https://racechrono.com/support/equations).
+
+For example, if the data is\
+`0x 12 34 56 78 90 AB CD EF`\
+where bytes are named
+`   A  B  C  D  E  F  G  H`,\
+then here is how different equations are calculated:
+
+Equation | Value (hex) | Value (dec)
+-------- | ----------- | -----------
+`A`      | `0x12`      | 18
+`B`      | `0x34`      | 52
+`F`      | `0xAB`      | 171
+`F * 0.1` | N/A        | 17.1
+`bytesToIntLe(raw, 0, 2)` | `0x3412` | 13330
+`bytesToIntLe(raw, 3, 2)` | `0x9078` | -28552
+`bitsToIntLe(raw, 4, 12)` | `0x341`  | 833
+
+You should be able to figure out the format for these equation for other data
+logging systems.
+
+### CAN ID 0x40 (64)
+
+Update frequency: 100 times per second.
+
+Example values:\
+`0x 5D 0B C9 82 00 00 00 C7` (parked)\
+`0x 10 0D FA 06 00 00 00 C3` (moving slowly)
+
+Channel name | Equation | Notes
+------------ | -------- | -----
+Engine RPM | `bitsToUIntLe(raw, 16, 14)` |
+Accelerator position | `E / 2.55` |
+
+### CAN ID 0x41 (65)
+
+Update frequency: 100 times per second.
+
+Example values:
+`0x C9 43 96 A6 7B 27 65 02` (parked)
+`0x 94 4E 44 A7 78 27 7B 00` (moving slowly)
+
+### CAN ID 0x118 (280)
+
+Update frequency: 50 times per second.
+
+Example values:
+`0x 7E 0F 00 07 00 4F 00 00` (parked)
+`0x 8C 02 00 21 00 50 00 00` (moving slowly)
+
+### CAN ID 0x138 (312)
+
+Update frequency: 50 times per second.
+
+Example values:
+`0x 28 0C DD 06 00 00 00 00` (parked)
+`0x 90 0D 13 FA 3F 00 00 00` (moving slowly)
+
+Channel name | Equation | Notes
+------------ | -------- | -----
+Steering angle | `bytesToIntLe(raw, 2, 2) * 0.1` | Positive value = turning right. You can add a `-` if you prefer it the other way around.
+Yaw rate | `bytesToIntLe(raw, 4, 2) * -0.2725` | Calibrated against the gyroscope in RaceBox Mini. Gen1 used 0.286478897 instead.
+
+### CAN ID 0x139 (313)
+
+Update frequency: 50 times per second.
+
+Example values:
+`0x 72 5A 00 E0 08 00 DA 1C` (parked)
+`0x 62 5B FC E0 08 00 CD 1C` (moving slowly)
+
+Channel name | Equation | Notes
+------------ | -------- | -----
+Speed | `bitsToUIntLe(raw, 16, 13) * 0.015694` | You may want to check the multiplier against an external GPS device, especially if running larger/smaller diameter tires
+Brake pressure | `F * 128` | Coefficient taken from 1st gen cars, but might need to be verified.
+
+### CAN ID 0x13B (315)
+
+Update frequency: 50 times per second.
+
+Example values:
+`0x 47 0F 00 00 FF FF FF FF` (parked)
+`0x 37 02 00 00 FF FF FE FD` (moving slowly)
+
+### CAN ID 0x13C (316)
+
+Update frequency: 50 times per second.
+
+Example values:
+`0x D4 0F 0E 38 02 00 40 00` (parked)
+`0x 12 0E 00 0B 0E 42 6C 00` (moving slowly)
+
+### CAN ID 0x143 (323)
+
+Update frequency: 50 times per second.
+
+Example values:
+`0x 51 0D 00 00 00 00 00 00` (parked)
+`0x 5C 07 00 10 01 00 00 00` (moving slowly)
+
+Channel name | Equation | Notes
+------------ | -------- | -----
+Speed | `bitsToUIntLe(raw, 24, 14) * 0.015694` | You may want to check the multiplier against an external GPS device, especially if running larger/smaller diameter tires
+
+### CAN ID 0x146 (326)
+
+Update frequency: 50 times per second.
+
+Example values:
+`0x 7C 1B CE 42 09 01 00 00` (parked)
+`0x 19 11 68 48 11 00 00 00` (moving slowly)
+
+### CAN ID 0x2D2 (722)
+
+Update frequency: 33.3 times per second.
+
+Example values:
+`0x 3A 06 40 00 20 00 00 00` (parked)
+`0x 3E 02 48 00 20 00 00 00` (moving slowly)
+
+### CAN ID 0x345 (837)
+
+Update frequency: 10 times per second.
+
+Channel name | Equation | Notes
+------------ | -------- | -----
+Engine oil temperature | `D - 40` |
+Coolant temperature | `E - 40` |
 
 ### Typical histogram of CAN IDs
 
