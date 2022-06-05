@@ -32,9 +32,12 @@ scope of this documentation.
 
 Here's how you should wire the male connector:
 
-![Wiring for the male connector](../images/gen2_socket_wiring.jpg)
+<img src="../images/gen2_socket_wiring.jpg"
+  alt="Wiring for the male connector" width="500" height="500" />
 
-  The blue wire on this photo is CAN H, the white wire is CAN L.
+The blue wire on this photo is CAN H, the white wire is CAN L.
+
+TODO: document which pins are ACC 12V and GND.
 
 ## Details on some CAN IDs
 
