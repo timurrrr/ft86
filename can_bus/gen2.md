@@ -89,6 +89,10 @@ Example values:\
 `0x C9 43 96 A6 7B 27 65 02` (parked)\
 `0x 94 4E 44 A7 78 27 7B 00` (moving slowly)
 
+Channel name | Equation | Notes
+------------ | -------- | -----
+A/C fan clutch | `H & 0x2` | 2 is engaged, 0 is disengaged
+
 ### CAN ID 0x118 (280)
 
 Update frequency: 50 times per second.
@@ -121,6 +125,7 @@ Example values:\
 Channel name | Equation | Notes
 ------------ | -------- | -----
 Speed | `bitsToUIntLe(raw, 16, 13) * 0.015694` | You may want to check the multiplier against an external GPS device, especially if running larger/smaller diameter tires
+Brake lights switch | `(E & 0x4)` | `4` is on, `0` is off
 Brake pressure | `F * 128` | Coefficient taken from 1st gen cars, but might need to be verified.
 
 ### CAN ID 0x13B (315)
@@ -158,6 +163,14 @@ Update frequency: 50 times per second.
 Example values:\
 `0x 7C 1B CE 42 09 01 00 00` (parked)\
 `0x 19 11 68 48 11 00 00 00` (moving slowly)
+
+### CAN ID 0x241 (577)
+
+Update frequency: 20 times per second.
+
+Channel name | Equation | Notes
+------------ | -------- | -----
+Clutch position (%) | `(F & 0x80) / 1.28` | `100` is "clutch pedal depressed", `0` is "clutch pedal released"
 
 ### CAN ID 0x2D2 (722)
 
