@@ -141,6 +141,7 @@ Channel name | Equation | Notes
 ------------ | -------- | -----
 Lateral acceleration | `bytesToIntLe(raw, 6, 1) * 0.2` |
 Longitudinal acceleration | `bytesToIntLe(raw, 7, 1) * -0.1` |
+Combined acceleration | `sqrt(pow2(bytesToIntLe(raw, 6, 1) * 0.2) + pow2(bytesToIntLe(raw, 7, 1) * 0.1))` |
 
 ### CAN ID 0x13C (316)
 
