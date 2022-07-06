@@ -39,7 +39,7 @@ accelerometers.
 
 Channel name | Equation | Notes
 ------------ | -------- | -----
-Steering angle | `bytesToIntLe(raw, 0, 2) * -0.1` | Also available in `0xD0`
+Steering angle | `bytesToIntLe(raw, 0, 2) * 0.1` | Also available in `0xD0`
 ??? | `C` or `bytesToIntLe(raw, 2, 1)` | The value is 112 most of the time for me
 ??? | `D` or `bytesToIntLe(raw, 3, 1)` | 0–14 sawtooth
 ??? | `E` or `bytesToIntLe(raw, 4, 1)` | The value is 0 most of the time for me
@@ -53,12 +53,12 @@ Update frequency: 50 times per second.
 
 Channel name | Equation | Notes
 ------------ | -------- | -----
-Steering angle | `bytesToIntLe(raw, 0, 2) * 0.1` | Also available in 0x18
+Steering angle | `bytesToIntLe(raw, 0, 2) * -0.1` | Positive value = turning left. You can add a `-` if you prefer it the other way around. Also available in `0x18`.
 Yaw rate | `bytesToIntLe(raw, 2, 2) * -0.286478897` | The multiplier for º/sec appears to be ((90 / pi) * 100). Or is this "yaw rate"?..
 ??? | `E` | Some flags?
 ??? | `F` | Some flags?
-Lateral acceleration | `bytesToIntLe(raw, 6, 1) * 0.2` | Not 100% sure about the multiplier, but looks about right
-Longitudinal acceleration | `bytesToIntLe(raw, 7, 1) * -0.1` | Not 100% sure about the multiplier, but looks about right
+Lateral acceleration | `bytesToIntLe(raw, 6, 1) * 0.2` |
+Longitudinal acceleration | `bytesToIntLe(raw, 7, 1) * -0.1` |
 Combined acceleration | `sqrt(pow2(bytesToIntLe(raw, 6, 1) * 0.2) + pow2(bytesToIntLe(raw, 7, 1) * 0.1))` |
 
 ### CAN ID 0xD1 (209)

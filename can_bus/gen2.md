@@ -80,6 +80,7 @@ Engine RPM | `bitsToUIntLe(raw, 16, 14)` |
 Accelerator position | `E / 2.55` |
 Accelerator position | `F / 2.55` | Seems to always have the same value as `E`
 Accelerator position | `G / 2.55` | Seems to always have the same value as `E`
+??? | `H & 0xC0` | `0xC0` when off the accelerator pedal, `0x00` otherwise.
 
 ### CAN ID 0x41 (65)
 
@@ -111,7 +112,7 @@ Example values:\
 
 Channel name | Equation | Notes
 ------------ | -------- | -----
-Steering angle | `bytesToIntLe(raw, 2, 2) * 0.1` | Positive value = turning right. You can add a `-` if you prefer it the other way around.
+Steering angle | `bytesToIntLe(raw, 2, 2) * -0.1` | Positive value = turning left. You can add a `-` if you prefer it the other way around.
 Yaw rate | `bytesToIntLe(raw, 4, 2) * -0.2725` | Calibrated against the gyroscope in RaceBox Mini. Gen1 used 0.286478897 instead.
 
 ### CAN ID 0x139 (313)
@@ -135,6 +136,11 @@ Update frequency: 50 times per second.
 Example values:\
 `0x 47 0F 00 00 FF FF FF FF` (parked)\
 `0x 37 02 00 00 FF FF FE FD` (moving slowly)
+
+Channel name | Equation | Notes
+------------ | -------- | -----
+Lateral acceleration | `bytesToIntLe(raw, 6, 1) * 0.2` |
+Longitudinal acceleration | `bytesToIntLe(raw, 7, 1) * -0.1` |
 
 ### CAN ID 0x13C (316)
 
