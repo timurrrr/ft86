@@ -116,6 +116,24 @@ Gear | `(G & 0xf) * (1 - (min(G & 0xf, 7)) / 7)` | It's basically just `G & 0xf`
 ??? | `G & 0xF0` | I saw values of 128, 160, 192 here.
 ??? | `H` | Equals to 16 when I lift off the accelerator, then turns to 8, then 0.
 
+### CAN ID 0x144 (324)
+
+Update frequency: 50 times per second.
+
+Channel name | Equation | Notes
+------------ | -------- | -----
+Brake pedal pressed | `(G & 8) / 8` |
+
+### CAN ID 0x152 (338)
+
+Update frequency: 50 times per second.
+
+Channel name | Equation | Notes
+------------ | -------- | -----
+Hand brake on | `(G & 8) / 8` |
+Brake pedal pressed | `(G & 16) / 16` |
+
+
 ### CAN ID 0x360 (864)
 
 Update frequency: 20 times per second.
