@@ -170,6 +170,7 @@ Channel name | Equation | Notes
 Driver's door open | `D & 1` | Tested on a RHD car. The equation for driver and passenger door open might be swapped for LHD cars.
 Passenger's door open | `(D & 2) / 2` | Tested on a RHD car. The equation for passenger and driver door open might be swapped for LHD cars.
 Fog lights on | `(B & 128) / 128` | Flag is only set when the main lights are on (parking or full).
+Boot open | `(D & 32) / 32` |
 
 ### CAN ID 0x375 (885)
 
@@ -179,7 +180,8 @@ Channel name | Equation | Notes
 ------------ | -------- | -----
 Driver's door open | `B & 1` | Tested on a RHD car. The equation for driver and passenger door open might be swapped for LHD cars.
 Passenger's door open | `(B & 2) / 2` | Tested on a RHD car. The equation for passenger and driver door open might be swapped for LHD cars.
-Either door open | `(D & 4) / 4` | May also be flagged if boot is open. Haven't tested.
+Boot open | `(B & 32) / 32` |
+Either door open | `(D & 4) / 4` | Only flagged when either door is open. Not flagged for the boot.
 Lights on | `(D & 8) / 8` | Flag is set for both parking lights and full lights.
 
 ### Would be nice to find CAN IDs for ...
