@@ -1,5 +1,12 @@
 # CAN bus (2022 model year)
 
+## Pre-word
+
+The purpose of this page is to document as much data channels on the CAN bus
+as possible. If your goal is to set up data logging in RaceChrono, there is
+a better alternative:
+https://github.com/timurrrr/RaceChronoDiyBleDevice/blob/master/can_db/ft86_gen2.md
+
 Special thanks to Ken Houseal for his early legwork on finding and documenting
 how to connect to the CAN bus, and finding some of these data mappings!
 
@@ -19,6 +26,13 @@ of the photo:
 <img src="../images/gen2_asc_connector_access.jpg"
   alt="Location of the connector" width="500" height="500" />
 
+You can buy an off-the-shelf harness that taps into the ASC connector and
+provides access to the CAN bus in an OBD-II form factor:\
+https://ansixauto.com/2022-brz-gt86-can-adapter/
+
+### Making your own connector
+
+Alternatively, you can make your own connector.
 You can then buy a male connector by TE Connectivity, part number 1376106-1.
 You will also need to buy male pins, part number 1376109-1.
 
@@ -235,3 +249,13 @@ parking lot:
 0x660 | 1632 | 20
 0x6B1 | 1713 | 10
 0x6E2 | 1762 | 10
+
+---
+
+<details>
+  <summary>Psst, looks like you're into this stuff!</summary>
+
+  If you found this page useful, consider donating so I can buy some beer/boba:
+ 
+  [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate?business=ZKULAWZFJKCES&item_name=Donation+to+support+the+ft86+project+on+GitHub&currency_code=USD)
+</details>
