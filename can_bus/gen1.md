@@ -1,6 +1,16 @@
 # CAN bus (2013-2020 model years)
 
+## Pre-word
+
+The purpose of this page is to document as much data channels on the CAN bus
+as possible. If your goal is to set up data logging in RaceChrono, there is
+a better alternative:
+https://github.com/timurrrr/RaceChronoDiyBleDevice/blob/master/can_db/ft86.md
+
 ## Connections
+
+The simplest way to access/use the CAN bus of these cars is to use pins 6 and
+14 on the standard OBD-II port.
 
 Besides the CAN pins in the OBD-II port, there is a CAN bus male port hidden
 behind the car multimedia head unit:
