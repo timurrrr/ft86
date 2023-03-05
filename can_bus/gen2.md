@@ -143,6 +143,18 @@ Speed | `bitsToUIntLe(raw, 16, 13) * 0.015694` | You may want to check the multi
 Brake lights switch | `(E & 0x4)` | `4` is on, `0` is off
 Brake pressure | `F * 128` | Coefficient taken from 1st gen cars, but might need to be verified.
 
+### CAN ID 0x13A (314)
+
+Available on C_CAN, which can be found at the power steering unit. This channel is not available on B_CAN which connects to the ASC unit.
+
+
+Channel name | Equation | Notes
+------------ | -------- | -----
+Wheel speed FL | `bitsToUIntLe(raw, 12, 13) * 0.015694` | Use same multiplier as for speed in 0x139
+Wheel speed FR | `bitsToUIntLe(raw, 25, 13) * 0.015694` | Use same multiplier as for speed in 0x139
+Wheel speed RL | `bitsToUIntLe(raw, 38, 13) * 0.015694` | Use same multiplier as for speed in 0x139
+Wheel speed RR | `bitsToUIntLe(raw, 51, 13) * 0.015694` | Use same multiplier as for speed in 0x139
+
 ### CAN ID 0x13B (315)
 
 Update frequency: 50 times per second.
@@ -192,6 +204,7 @@ Update frequency: 20 times per second.
 Channel name | Equation | Notes
 ------------ | -------- | -----
 Clutch position (%) | `(F & 0x80) / 1.28` | `100` is "clutch pedal depressed", `0` is "clutch pedal released"
+Gear | `bitsToUIntLe(raw, 35, 3)` | 0 represents Neutral
 
 ### CAN ID 0x2D2 (722)
 
@@ -209,6 +222,14 @@ Channel name | Equation | Notes
 ------------ | -------- | -----
 Engine oil temperature | `D - 40` |
 Coolant temperature | `E - 40` |
+
+### CAN ID 0x390 (912)
+
+Update frequency: 10 times per second.
+
+Channel name | Equation | Notes
+------------ | -------- | -----
+Intake Air Temperature | `E / 2 - 40` | Might be ambient air temperature
 
 ### Typical histogram of CAN IDs
 
