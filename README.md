@@ -9,11 +9,13 @@ Pull requests with additions and corrections are welcome!
 
 ## Table of contents
 
-TODO: notes on DIY track day maintenance
-
-[CAN bus mapping for 2013-2020 model years](/can_bus/gen1.md)
-
-[CAN bus mapping for 2022+ model years](/can_bus/gen2.md)
+* Maintenance
+  * [Fluid changes on 2022+ model year cars](/maintenance/fluid_changes_gen2.md)
+* DIY track day maintenance
+  * TODO
+* CAN bus
+  * [2013-2020 model years](/can_bus/gen1.md)
+  * [2022+ model years](/can_bus/gen2.md)
 
 ## Support the project
 
