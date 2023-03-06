@@ -204,7 +204,7 @@ Update frequency: 20 times per second.
 Channel name | Equation | Notes
 ------------ | -------- | -----
 Clutch position (%) | `(F & 0x80) / 1.28` | `100` is "clutch pedal depressed", `0` is "clutch pedal released"
-Gear | `bitsToUIntLe(raw, 35, 3)` | 0 represents Neutral
+Gear | `bitsToUIntLe(raw, 35, 3)` | 0 for N, 1—6 for gears 1–6
 
 ### CAN ID 0x2D2 (722)
 
@@ -229,7 +229,7 @@ Update frequency: 10 times per second.
 
 Channel name | Equation | Notes
 ------------ | -------- | -----
-Intake Air Temperature | `E / 2 - 40` | Might be ambient air temperature
+Air Temperature | `E / 2 - 40` |
 
 ### Typical histogram of CAN IDs
 
