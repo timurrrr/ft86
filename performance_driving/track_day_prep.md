@@ -125,6 +125,21 @@ the car/components/consumables, but aren't strictily required.
   * For gen2 cars, you will also need something like an Ansix ASC harness to be
     able to get the same information using an OBDLink MX+.
 
+## At the track
+
+Here are some common suggestions to consider at the track
+
+* Even with track pads, it's recommended to cool them down for a lap or two at
+  the end of the session, and/or drive a few circles in the paddock.
+* Make sure to cool down the oil before parking the car to about 200ºF or less.
+  Again, find a place around the paddock where you can drive in circles for a
+  few minutes. It is recommended to keep the RPMs above 3000 (15 mph in 1st
+  gear) to let the oil circulate and cool down the engine evenly.
+* Don't use the parking brake between sessions, as it may distort the hot rear
+  brake rotors and/or the parking brake pads can stick to the drum.
+* Check oil level between sessions, make sure it's at max (or higher --
+  some actually prefer slighlty overfilling).
+
 ---
 
 <details>
