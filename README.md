@@ -12,7 +12,7 @@ Pull requests with additions and corrections are welcome!
 * Maintenance
   * [Fluid changes on 2022+ model year cars](/maintenance/fluid_changes_gen2.md)
 * DIY track day maintenance
-  * TODO
+  * [Preparing for your first track day](/performance_driving/track_day_prep.md)
 * CAN bus
   * [2013-2020 model years](/can_bus/gen1.md)
   * [2022+ model years](/can_bus/gen2.md)
