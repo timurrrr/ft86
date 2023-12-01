@@ -2,8 +2,8 @@
 
 Track driving typically involves high speeds, heavy braking, hard cornering and
 a lot more heat than street driving. Most cars, including the 86/BRZ/FR-S, are
-not ready to be driven on track, so it's a good idea to do some extra
-preparation before going to your first track day.
+not ready to be driven on track when they roll off the factory, so it's a good
+idea to do some extra preparation before going to your first track day.
 
 Here's a list that I personally used to prepare a brand new GR86 owned by an
 intermediate driver (~30 track days) for the car's first track day:
