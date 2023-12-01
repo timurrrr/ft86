@@ -23,6 +23,8 @@ your 86/BRZ/FR-S, unless you plan to drive 50 mph the whole day.
     do it for you. It's a safety-critical job with a few things you can mess up,
     and fixing some of those things can be tricky (e.g. bubbles in the ABS
     module).
+  * Note that high temperature brake fluid requires more frequent changes. Some
+    fluids recommend changing every 12 months, some even every 6 months.
 * Brake pads
   * Factory brake pads are not designed for high temperatures either, even the
     ones that come in the Performance Package. Ask me how I know...
