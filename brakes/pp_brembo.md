@@ -5,8 +5,8 @@
 Brake pad code | Front    | Rear
 -------------- | -------- | ----
 FMSI D numbers | D1001    | D961
-Ferodo         | FRP3067H |
-Pagid          | 2487     | ??
+Ferodo         | FRP3067H | ???
+Pagid          | 2487     | 1587
 
 ## Front brake rotors
 
