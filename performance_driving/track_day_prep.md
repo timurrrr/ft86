@@ -38,19 +38,25 @@ your 86/BRZ/FR-S, unless you plan to drive 50 mph the whole day.
     good for beginners.
   * The **only** pad that I know that is good for street driving and performs
     reasonably well for light track days is CSG CP. It's pricey but lasts a long
-    time.
+    time. That being said, some people reported issues overheating these pads.
   * If you're sure that you're going to do more than 5 track days, invest into a
     set of dedicated track pads. They will last a long time and minimize the
     risk of rotor-related issues. Put the track pads in before the track day,
     put the OEM pads in after the track day and you're good. Replacing brake
     pads is one of the easiest things to learn to do on your car.
+  * Which brake pads to pick is a topic of endless debates on forums. Commonly
+    recommended budget-friendly options include:
+    * PowerStop Track Day Spec
+    * Carbotech XP10, XP12
+    * G-LOC R10, R12
+  * Please do your research on the forums/etc. about these pads before buying.
   * When replacing the pads, spend a few more minutes to take off the front
     rotors and remove the dust shields behind the rotors, as they limit the
     airflow that's important for cooling. Put the dust shield back for winter if
     you live in a place with snow, salt, etc.
 * Engine oil
   * Which oil brand and viscosity to pick is a topic of endless holy wars on
-    forums, Facebook forums, etc. I'm going to share what I think, it's up to
+    forums, Facebook groups, etc. I'm going to share what I think, it's up to
     you to follow it or vocally disagree.
   * The OEM oil is 0w-20 is too "thin" at high temperatures, not providing
     enough oil pressure to reliably lubricate the critical components of the
