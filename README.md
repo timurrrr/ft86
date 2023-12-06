@@ -9,6 +9,9 @@ Pull requests with additions and corrections are welcome!
 
 ## Table of contents
 
+* Brakes
+  * [Base brakes](/brakes/base.md)
+  * [Performance Package Brembo (2017-2020 model years)](/brakes/pp_brembo.md)
 * Maintenance
   * [Fluid changes on 2022+ model year cars](/maintenance/fluid_changes_gen2.md)
 * DIY track day maintenance
