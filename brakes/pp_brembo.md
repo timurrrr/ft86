@@ -24,7 +24,7 @@ Bleeder valves: 11 mm, 14.8 ft•lbs.
 
 ## Rear brakes torque specs
 
-Brake hose bracket bolt: 12 mm, 24.3 ft•lbs.
+Brake hose bracket bolt: ?? mm, ??? ft•lbs.
 
 Caliper / knuckle bolts: 17 mm, 53.8 ft•lbs.
 

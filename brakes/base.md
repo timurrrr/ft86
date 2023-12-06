@@ -22,3 +22,5 @@ Might need a crow foot to tighten the top bolts with a torque wrench.
 Brake hose bracket bolt: 12 mm, 24.3 ft•lbs.
 
 Caliper bracket bolts: 17 mm, 81.1 ft•lbs.
+
+Bleeder valve: 10 mm, 5.9 ft•lbs.
