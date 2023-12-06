@@ -2,11 +2,13 @@
 
 ## Brake pads
 
-Brake pad code | Front    | Rear
--------------- | -------- | ----
-FMSI D numbers | D1001    | D961
-Ferodo         | FRP3067H | ???
-Pagid          | 2487     | 1587
+Brake pad code | Front   | Rear
+-------------- | ------- | ----
+FMSI D numbers | D1001   | D961
+Ferodo         | FRP3067 | FCP1562
+Hawk           | HB453   | HB180
+Pagid          | 2487    | 1587, 2593
+PFC            | 7781    | 0109
 
 ## Front brake rotors
 
