@@ -6,6 +6,17 @@ Brake pad code | Front  | Rear
 -------------- | ------ | ----
 FMSI D numbers | D1539  | D1124
 
+## Front brake rotors
+
+**TODO:** Fill out.
+
+## Rear brake rotors
+
+**TODO:** Fill out.
+
+Compatible rotors:
+* Centric Premium 120.47031
+
 ## Front brakes torque specs
 
 Caliper bolts: 14 mm, 19.9 ft•lbs.

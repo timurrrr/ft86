@@ -2,17 +2,32 @@
 
 ## Brake pads
 
-Brake pad code | Front   | Rear
--------------- | ------- | ----
-FMSI D numbers | D1001   | D961
-Pagid          | 2487    | ??
+Brake pad code | Front    | Rear
+-------------- | -------- | ----
+FMSI D numbers | D1001    | D961
+Ferodo         | FRP3067H |
+Pagid          | 2487     | ??
 
-## Brake rotors
+## Front brake rotors
 
-Front: 326x30 mm
+Size: 326x30 mm
 
-Rear: 316x20 mm
+Compatible rotors:
+* Brembo 09.7812.11
+* Centric Premium 125.47019
+* DBA 654-10
+* DBA 4654S-10
+* DBA 5654GLDXS-10
+* Girodisc A1-007
 
+## Rear brake rotors
+
+Size: 316x20 mm
+
+Compatible rotors:
+* Centric Premium 125.47043
+* DBA 42656S-10 rear
+* Girodisc A2-095
 
 ## Front brakes torque specs
 
