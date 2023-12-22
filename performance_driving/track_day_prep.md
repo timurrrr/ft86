@@ -15,7 +15,8 @@ your 86/BRZ/FR-S, unless you plan to drive 50 mph the whole day.
 
 * Change the brake fluid
   * The factory brake fluid can boil under heavy use, which at best will mean
-    you need to limp home and at worst you crash into a wall.
+    you need to end the track day and early limp home and at worst you crash
+    into a wall. Not fun either way!
   * Get a high-temperature DOT 4 fluid.
   * I personally used ATE Typ 200 (a.k.a. Super Gold), but other commonly used
     ones are Castrol SRF and Motul RBF660.
