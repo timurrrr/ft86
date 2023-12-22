@@ -23,11 +23,12 @@ your 86/BRZ/FR-S, unless you plan to drive 50 mph the whole day.
     do it for you. It's a safety-critical job with a few things you can mess up,
     and fixing some of those things can be tricky (e.g. bubbles in the ABS
     module).
-  * Note that high temperature brake fluids typically absorb moisture much faster
-    than a regular "street" fluids, and require more frequent changes. Note that
+  * The performance characteristics of brake fluids degrade as the fluid absorbs
+    moisture. High temperature brake fluids typically absorb moisture much faster
+    than regular "street" fluids, and thus require more frequent changes. Note that
     the absorbtion happens even if the car is not driven, so this factor depends
-    on *time*, not just *usage*. Some manufacturers recommend changing their brake
-    fluids every 12 months, or even every 6 months!
+    on *time*, not just *usage*! Some manufacturers recommend changing their brake
+    fluids every 12 months, or even every 6 months.
   * Some fluids degrade faster under heavy use, and may require changes each two
     or three track days.
 * Brake pads
