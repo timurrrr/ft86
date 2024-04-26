@@ -105,6 +105,14 @@ the car/components/consumables, but aren't strictily required.
   * A cost-effective way to get ~-2.5º of front camber is Pedders camber plates
     and SPC 81305 camber bolts. Make sure to tighten the camber bolts with the
     weight of the car on the suspension to maximize camber.
+  * If staying in the SCCA DS class is important, you can only use OEM
+    "crash bolts" to add front camber. Unfortunately, that doesn't provide enough
+    camber to optimize tire wear and is bad for the longevity of the tires.
+  * If the camber is not limited by any regulations for you, aim for -3.3º front
+    and -2.5º rear camber as a starting point.
+    * You'll need adjustable rear upper _or_ lower control arms to be able to
+      achieve that. Please do your own research on the pros and cons of RUCA vs RLCA.
+    * The stock toe arms should be sufficient for -2.5º rear camber.
   * You will need to get the toe re-aligned after installing camber bolts.
   * A good starting point is 0 toe in the front and 0.07º of toe per side in the
     rear.
@@ -131,14 +139,16 @@ the car/components/consumables, but aren't strictily required.
   * I personally use Motul Gear Competition 75w-140.
 * Data logging
   * Get a 10+ Hz GPS module and record your driving with RaceChrono.
-  * This will give you a lot of insight into your driving over time, and more
-    experienced people will be able to give you advice even without riding in
-    your car.
-  * RaceBox Mini is a great GPS.
+    * This will give you a lot of insight into your driving over time, and more
+      experienced people will be able to give you advice even without riding in
+      your car.
+    * RaceBox Mini is a great 25 Hz GPS with very good accuracy.
   * For gen1 cars, OBDLink MX+ can log the accelerator and brake pedals,
     steering angle, RPM, wheel speed, oil and coolant temperatures.
   * For gen2 cars, you will also need something like an Ansix ASC harness to be
     able to get the same information using an OBDLink MX+.
+  * Android only: you may be able to save some money by using OBDLink LX. Bear
+    in mind that OBDLink LX will not work with iOS!
 
 ## At the track
 
