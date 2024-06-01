@@ -231,6 +231,36 @@ Channel name | Equation | Notes
 ------------ | -------- | -----
 Air Temperature | `E / 2 - 40` |
 
+### CAN ID 0x6E2 (1762)
+
+Update frequency: 1 per second.
+
+Example values (from a US car):\
+`0x 00 00 04 FE FE FE FE FE` (when pressures aren't displayed shortly after turning ignition on)\
+`0x 00 00 04 48 42 46 44 FE` (tire pressures in psi: 36 FL, 33 FR, 35 RL, 34 RR)\
+`0x 00 00 24 4E 50 39 4E FE` (tire pressures in psi: 39 FL, 40 FR, 28 RL, 39 RR; RL highlighted yellow, TPMS light on)\
+`0x 00 00 24 37 35 48 46 FE` (tire pressures in psi: 27 FL, 26 FR, 36 RL, 35 RR; FL and FR highlighted yellow, TPMS light on)
+
+Channel name | Equation | Notes
+------------ | -------- | -----
+Tire pressure FL | `lowPass(D >> 1, 126) * 6.8948` | Result is in kPa (as RaceChrono expects)
+Tire pressure FR | `lowPass(E >> 1, 126) * 6.8948` | Ditto
+Tire pressure RL | `lowPass(F >> 1, 126) * 6.8948` | Ditto
+Tire pressure RR | `lowPass(G >> 1, 126) * 6.8948` | Ditto
+TPMS light on | `(C >> 5) & 1` |
+Low pressure FL | `D & 1` | The FL tire pressure is shown in yellow when this bit is set
+Low pressure FR | `E & 1` | Ditto
+Low pressure RL | `F & 1` | Ditto
+Low pressure RR | `G & 1` | Ditto
+
+Based on my limited testing, the order of tires matches how the pressures are displayed
+in the gauge cluster, i.e. correctly account for tire rotation, etc.
+
+These values were read from a US market car where pressures are displayed in psi.
+I suspect that cars on other markets (using bar or kPa) will use a different scale
+in the data encoding. Please let me know if you find any data examples from non-US
+cars and I'll add them here! 
+
 ### Typical histogram of CAN IDs
 
 Here's what the distribution of CAN IDs looks like in the CAN bus while idling in a
