@@ -92,7 +92,7 @@ the car/components/consumables, but aren't strictily required.
     ~250ºF due to oil thinning causing low oil pressures.
   * For gen2 cars (FA24D with a water/oil heat exchanger), there is an opinion
     that thicker oil + occasional cooldown laps is sufficient. For a complete
-    beginner, another factor that can help is shoft-shifting at say 6000 rpm.
+    beginner, another factor that can help is short-shifting at say 6000 rpm.
   * For gen1 cars (FA20D), I personally saw ~290ºF oil temperature on my first
     track day, not going that fast.
   * Jackson Racing is a commonly recommended option, although their customers
@@ -111,9 +111,12 @@ the car/components/consumables, but aren't strictily required.
   * If the camber is not limited by any regulations for you, aim for -3.3º front
     and -2.5º rear camber as a starting point.
     * You'll need adjustable rear upper _or_ lower control arms to be able to
-      achieve that. Please do your own research on the pros and cons of RUCA vs RLCA.
+      achieve that rear camber. Please do your own research on the pros and cons
+      of RUCA vs RLCA.
     * The stock toe arms should be sufficient for -2.5º rear camber.
-  * You will need to get the toe re-aligned after installing camber bolts.
+  * You will need to get the toe re-aligned after installing camber bolts to get
+    it just right, but small changes in camber don't have a very strong impact
+    on toe.
   * A good starting point is 0 toe in the front and 0.07º of toe per side in the
     rear.
 * Tires
@@ -138,7 +141,10 @@ the car/components/consumables, but aren't strictily required.
   * Motul Gear 300 is also recommended for the diff.
   * I personally use Motul Gear Competition 75w-140.
 * Data logging
-  * Get a 10+ Hz GPS module and record your driving with RaceChrono.
+  * In general, this works like: 
+    LapTimer App (central) + GPS module (more accurate) + OBDLink(CAN data)
+  * Get a 10+ Hz GPS module and record your driving with RaceChrono (an app for 
+    iPhone and Android).
     * This will give you a lot of insight into your driving over time, and more
       experienced people will be able to give you advice even without riding in
       your car.
@@ -163,7 +169,7 @@ Here are some common suggestions to consider at the track
 * Don't use the parking brake between sessions, as it may distort the hot rear
   brake rotors and/or the parking brake pads can stick to the drum.
 * Check oil level between sessions, make sure it's at max (or higher --
-  some actually prefer slighlty overfilling).
+  some actually prefer overfilling by 0.5-1L).
 
 ---
 
