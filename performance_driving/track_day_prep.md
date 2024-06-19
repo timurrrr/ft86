@@ -141,20 +141,27 @@ the car/components/consumables, but aren't strictily required.
   * Motul Gear 300 is also recommended for the diff.
   * I personally use Motul Gear Competition 75w-140.
 * Data logging
-  * In general, this works like: 
-    LapTimer App (central) + GPS module (more accurate) + OBDLink(CAN data)
-  * Get a 10+ Hz GPS module and record your driving with RaceChrono (an app for 
-    iPhone and Android).
-    * This will give you a lot of insight into your driving over time, and more
-      experienced people will be able to give you advice even without riding in
-      your car.
+  * In general, you need a device (can be a phone app) that logs data, has a GPS
+    module, and ideally can monitor and record your inputs.
+  * A beginner-friendly way to start is to get a Garmin Catalyst. It makes a lot
+    of otherwise complicated things easy and fun. The downsides are that it's
+    expensive, doesn't provide you with ways to review your inputs, and doesn't
+    have data sharing/comparison options...
+  * A cost-effective way to start is to get a 10+ Hz GPS module and record your
+    driving with RaceChrono (an app for iPhone and Android).
+    * This will give you a lot more insight into your driving over time.
+    * It allows sharing data, so that more experienced people can review your data
+      and give you advice even without riding in your car. Similarly, you can ask
+      others to share their data with you and see what they do better.
     * RaceBox Mini is a great 25 Hz GPS with very good accuracy.
-  * For gen1 cars, OBDLink MX+ can log the accelerator and brake pedals,
-    steering angle, RPM, wheel speed, oil and coolant temperatures.
+  * For gen1 cars, OBDLink MX+ (a simple OBD-II dongle) can log the accelerator
+    and brake pedals, steering angle, RPM, wheel speed, oil and coolant temperatures.
+    See further pointers [here](https://github.com/timurrrr/RaceChronoDiyBleDevice/blob/master/can_db/ft86.md).
   * For gen2 cars, you will also need something like an Ansix ASC harness to be
     able to get the same information using an OBDLink MX+.
-  * Android only: you may be able to save some money by using OBDLink LX. Bear
-    in mind that OBDLink LX will not work with iOS!
+    See further pointers [here](https://github.com/timurrrr/RaceChronoDiyBleDevice/blob/master/can_db/ft86_gen2.md).
+  * Android only: you may be able to save some money by using OBDLink LX. **OBDLink
+    LX will not work with iOS!**
 
 ## At the track
 
