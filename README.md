@@ -14,6 +14,8 @@ Pull requests with additions and corrections are welcome!
   * [Performance Package Brembo (2017-2020 model years)](/brakes/pp_brembo.md)
 * Maintenance
   * [Fluid changes on 2022+ model year cars](/maintenance/fluid_changes_gen2.md)
+* Mods
+  * [Aftermarket anti-roll bars](/mods/arbs.md)
 * DIY track day maintenance
   * [Preparing for your first track day](/performance_driving/track_day_prep.md)
 * CAN bus
