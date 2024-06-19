@@ -5,7 +5,7 @@ bars, "sways").
 
 The numbers were calculated based on the manufacturer's claims such as "+123%
 stiffness compared to stock (2013-2016 OEM bar)". Please let me know if you can
-find more trustworthy numbers! Also other contributions to this page are very
+find more trustworthy numbers! Other contributions to this page are also very
 much welcome.
 
 Each list is ordered roughly from the softest to stiffest options. All values
