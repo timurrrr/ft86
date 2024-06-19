@@ -34,8 +34,8 @@ Cusco 14 mm (965 311 B14) | 82
 Early gen1s | 113
 2017+ gen1 Subaru BRZ | 140
 Perrin 16 mm | 147 | 186 | 244 | Requires Perrin end links for some positions
-Cusco 16 mm (965 311 B16) | 190
 Whiteline 16 mm | 158 | 214 | 312
+Cusco 16 mm (965 311 B16) | 190
 Whiteline 18 mm | 242 | 314 | 411
 Eibach 19 mm | 255 | | 338
 Perrin 19 mm | 283 | 388 | 505
