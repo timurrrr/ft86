@@ -17,8 +17,8 @@ Product name | Softest | Stiffest | Notes
 ------------ | ------- | -------- | -----
 Cusco 16 mm (965 311 A16) | 111
 Gen1 OE | 141
-ST Suspension 19 mm | 199 | 248
 Perrin 19 mm | 176 | 242 | Might experience fitment issues, such as end links hitting the FLCA at full droop, and/or the tires hitting the ARB at full lock under load
+ST Suspension 19 mm | 199 | 248
 Cusco 20 mm (965 311 A20) | 245
 Whiteline 20 mm | 306 | 437
 Perrin 22 mm | 324 | 448
