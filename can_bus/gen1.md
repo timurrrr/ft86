@@ -248,7 +248,7 @@ parking lot:
 ---
 
 <details>
-  <summary>Psst, looks like you're into this stuff!</summary>
+  <summary>Psst, it looks like you're into this stuff!</summary>
 
   If you found this page useful, consider donating so I can buy some beer/boba:
 
