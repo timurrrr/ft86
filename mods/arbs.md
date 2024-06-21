@@ -31,11 +31,11 @@ Eibach 25 mm | 500 | 585
 
 Product name | Softest | Middle | Stiffest | Notes
 ------------ | ------- | ------ | -------- | -----
-Karcepts 0.095 in | 64 | 81 | 109 | Uses Karcepts end links, has intermediate positions between listed rates
-Karcepts 0.120 in | 71 | 90 | 122 | Uses Karcepts end links, has intermediate positions between listed rates
+Karcepts 0.095 in | 64 | ... | 109 | Uses Karcepts end links. Has 7 intermediate positions between the listed rates.
+Karcepts 0.120 in | 71 | ... | 122 | Uses Karcepts end links. Has 7 intermediate positions between the listed rates.
 Mann Engineering 13 mm   | 72 | 89 | 113 | Requires a spacer between the subframe and the bushings, likely won't work on gen2 BRZs
 Cusco 14 mm (965 311 B14) | 82
-Karcepts Solid | 84 | 105 | 142 | Uses Karcepts end links, has intermediate positions between listed rates
+Karcepts Solid | 84 | ... | 142 | Uses Karcepts end links. Has 7 intermediate positions between the listed rates.
 OEM 2013-2016 Gen 1 14 mm | 113
 OEM 2017+ Gen 1 15 mm | 140
 Perrin 16 mm | 147 | 186 | 244 | Requires Perrin end links for some positions
