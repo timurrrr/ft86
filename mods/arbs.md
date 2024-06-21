@@ -19,9 +19,9 @@ Cusco 16 mm (965 311 A16) | 111
 OEM Gen 1 | 141
 Perrin 19 mm | 176 | 242 | Might experience fitment issues, such as end links hitting the FLCA at full droop, and/or the tires hitting the ARB at full lock under load
 ST Suspension 19 mm | 199 | 248
-Karcepts 0.804 in | 235 | 375 | Uses Karcepts end links, has intermediate positions between listed rates
+Karcepts 0.804 in | 235 | 375 | Uses Karcepts end links. Has 5 intermediate positions between the listed rates.
 Cusco 20 mm (965 311 A20) | 245
-Karcepts 0.875 in | 299 | 475 | Uses Karcepts end links, has intermediate positions between listed rates
+Karcepts 0.875 in | 299 | 475 | Uses Karcepts end links. Has 5 intermediate positions between the listed rates.
 Whiteline 20 mm | 306 | 437
 Perrin 22 mm | 324 | 448
 Whiteline 22 mm | 440 | 547
