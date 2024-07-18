@@ -17,7 +17,33 @@ for OBD-II requests. If you want to log data with high refresh rates, you need
 to use an alternative connection. There are multiple options with different pros
 and cons. Below are the recommended ones:
 
+### DCM Connector
+
+**Only available on GR86s.** (Subaru, get your act together?)
+
+GR86s have an unused connector hidden behind the glovebox, near the cabin air
+filter and the 12V socket:
+
+<img src="../images/gr86_hidden_connector.png"
+  alt="Location of the DCM connector" width="500" height="342" />
+
+You can carefully peel off the tape that keeps it out of the way. It's hard but
+doable, take your time!
+
+<img src="../images/gr86_dcm_connector.png"
+  alt="A look at of the DCM connector" width="500" height="342" />
+
+You can use the two middle pins of a
+[Toyota radio harness](https://www.amazon.com/gp/product/B0002BEQJ8)
+to connect to the CAN bus through that connector.\
+Here are the pins that you need to use:
+
+<img src="../images/ft86_socket_wiring.jpg"
+  alt="Male connector wiring" width="512" height="384" />
+
 ### ASC port
+
+**This is only recommended for BRZ owners, as it lacks some important channels.**
 
 A common place to get access to the CAN bus is the ASC (a.k.a. "fake engine
 noise") female connector. It is located inside the dash slightly to the right of
@@ -53,30 +79,6 @@ Here's how you should wire the male connector:
 The blue wire on this photo is CAN H, the white wire is CAN L.
 
 TODO: document which pins are ACC 12V and GND.
-
-### DCM Connector
-
-*Only available on GR86 cars for some reason.* Subaru, get your act together!
-
-GR86s have an additional connector well-hidden behind the glovebox, near the
-cabin air filter and the 12V socket:
-
-<img src="../images/gr86_hidden_connector.png"
-  alt="Location of the DCM connector" width="500" height="342" />
-
-You can carefully peel off the tape that keeps it out of the way. It's hard but
-doable, take your time!
-
-<img src="../images/gr86_dcm_connector.png"
-  alt="A look at of the DCM connector" width="500" height="342" />
-
-You can use the two middle pins of a
-[Toyota radio harness](https://www.amazon.com/gp/product/B0002BEQJ8)
-to connect to the CAN bus through that connector.\
-Here are the pins that you need to use:
-
-<img src="../images/ft86_socket_wiring.jpg"
-  alt="Male connector wiring" width="512" height="384" />
 
 ## Details on some CAN IDs
 
@@ -290,9 +292,9 @@ cars and I'll add them here!
 ### Typical histogram of CAN IDs
 
 Here's what the distribution of CAN IDs looks like in the CAN bus while idling in a
-parking lot:
+parking lot for 10 seconds after driving for 10+ minutes:
 
- CAN ID (hex) | CAN ID (decimal) | Number of packets received over a 10 second period | Notes
+ CAN ID (hex) | CAN ID (decimal) | Message count | Notes
 ---- | --- | --- | ---
 0x40 | 64 | 1000
 0x41 | 65 | 1000
