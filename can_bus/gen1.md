@@ -28,7 +28,8 @@ You can use the two middle pins of a
 [Toyota radio harness](https://www.amazon.com/gp/product/B0002BEQJ8)
 to connect to the CAN bus in a reliable way.
 
-![CAN socket wiring](../images/ft86_socket_wiring.jpg)
+<img src="../images/ft86_socket_wiring.jpg"
+  alt="Male connector wiring" width="512" height="384" />
 
 It's recommended to use a ~60–90 cm (2–3') twisted pair cable between that port
 and your CAN reader.

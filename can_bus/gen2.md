@@ -14,7 +14,10 @@ how to connect to the CAN bus, and finding some of these data mappings!
 
 The ODB-II in the driver's footwell no longer exposes the CAN bus data except
 for OBD-II requests. If you want to log data with high refresh rates, you need
-to use an alternative connection.
+to use an alternative connection. There are multiple options with different pros
+and cons. Below are the recommended ones:
+
+### ASC port
 
 A common place to get access to the CAN bus is the ASC (a.k.a. "fake engine
 noise") female connector. It is located inside the dash slightly to the right of
@@ -24,13 +27,11 @@ arrow, and you can see the disconnected connector dangling in the bottom right
 of the photo:
 
 <img src="../images/gen2_asc_connector_access.jpg"
-  alt="Location of the connector" width="500" height="500" />
+  alt="Location of the ASC connector" width="500" height="500" />
 
 You can buy an off-the-shelf harness that taps into the ASC connector and
 provides access to the CAN bus in an OBD-II form factor:\
 https://ansixauto.com/2022-brz-gt86-can-adapter/
-
-### Making your own connector
 
 Alternatively, you can make your own connector.
 You can then buy a male connector by TE Connectivity, part number 1376106-1.
@@ -47,11 +48,35 @@ scope of this documentation.
 Here's how you should wire the male connector:
 
 <img src="../images/gen2_socket_wiring.jpg"
-  alt="Wiring for the male connector" width="500" height="500" />
+  alt="Wiring for the male ASC connector" width="500" height="500" />
 
 The blue wire on this photo is CAN H, the white wire is CAN L.
 
 TODO: document which pins are ACC 12V and GND.
+
+### DCM Connector
+
+*Only available on GR86 cars for some reason.* Subaru, get your act together!
+
+GR86s have an additional connector well-hidden behind the glovebox, near the
+cabin air filter and the 12V socket:
+
+<img src="../images/gr86_hidden_connector.png"
+  alt="Location of the DCM connector" width="500" height="342" />
+
+You can carefully peel off the tape that keeps it out of the way. It's hard but
+doable, take your time!
+
+<img src="../images/gr86_dcm_connector.png"
+  alt="A look at of the DCM connector" width="500" height="342" />
+
+You can use the two middle pins of a
+[Toyota radio harness](https://www.amazon.com/gp/product/B0002BEQJ8)
+to connect to the CAN bus through that connector.\
+Here are the pins that you need to use:
+
+<img src="../images/ft86_socket_wiring.jpg"
+  alt="Male connector wiring" width="512" height="384" />
 
 ## Details on some CAN IDs
 
@@ -145,8 +170,7 @@ Brake pressure | `F * 128` | Coefficient taken from 1st gen cars, but might need
 
 ### CAN ID 0x13A (314)
 
-Available on C_CAN, which can be found at the power steering unit. This channel is not available on B_CAN which connects to the ASC unit.
-
+*This channel is not available on the B_CAN which connects to the ASC unit.*
 
 Channel name | Equation | Notes
 ------------ | -------- | -----
@@ -178,6 +202,8 @@ Example values:\
 `0x 12 0E 00 0B 0E 42 6C 00` (moving slowly)
 
 ### CAN ID 0x143 (323)
+
+*This channel is not available on the DCM port.*
 
 Update frequency: 50 times per second.
 
@@ -266,40 +292,58 @@ cars and I'll add them here!
 Here's what the distribution of CAN IDs looks like in the CAN bus while idling in a
 parking lot:
 
- CAN ID (hex) | CAN ID (decimal) | Number of packets received over a 10 second period
----- | --- | ---
+ CAN ID (hex) | CAN ID (decimal) | Number of packets received over a 10 second period | Notes
+---- | --- | --- | ---
 0x40 | 64 | 1000
 0x41 | 65 | 1000
 0x118 | 280 | 500
 0x138 | 312 | 500
 0x139 | 313 | 500
+0x13A | 314 | 500 | Not available on the ASC port
 0x13B | 315 | 500
 0x13C | 316 | 500
-0x143 | 323 | 500
+0x143 | 323 | 500 | Not available on the DCM port
 0x146 | 326 | 500
 0x228 | 552 | 167
 0x241 | 577 | 200
-0x2D2 | 722 | 334
+0x2D2 | 722 | 334 | Not available on the DCM port
 0x328 | 808 | 100
 0x32B | 811 | 100
 0x330 | 816 | 83
 0x332 | 818 | 83
 0x33A | 826 | 83
-0x33B | 827 | 83
+0x33B | 827 | 83 | Not available on the DCM port
 0x345 | 837 | 100
 0x390 | 912 | 100
 0x393 | 915 | 100
 0x39A | 922 | 50
-0x3A7 | 935 | 100
+0x3A7 | 935 | 100 | Not available on the DCM port
 0x3AC | 940 | 100
-0x3D9 | 985 | 50
+0x3D9 | 985 | 50 | Not available on the DCM port
 0x500 | 1280 | 20
-0x506 | 1286 | 20
-0x509 | 1289 | 20
-0x50B | 1291 | 20
+0x506 | 1286 | 20 | Not available on the DCM port
+0x509 | 1289 | 20 | Not available on the DCM port
+0x50B | 1291 | 20 | Not available on the DCM port
+0x513 | 1299 | 20 | Not available on the ASC port
+0x515 | 1301 | 20 | Not available on the ASC port
+0x517 | 1303 | 20 | Not available on the DCM port
+0x640 | 1600 | 8 | These few were added after an OTA for the head unit?
+0x651 | 1617 | 8 |
+0x652 | 1618 | 8 |
+0x654 | 1620 | 8 |
+0x658 | 1624 | 10 | Not available on the ASC port
 0x660 | 1632 | 20
-0x6B1 | 1713 | 10
+0x663 | 1635 | 10 | These few were added after an OTA for the head unit?
+0x68C | 1676 | 8
+0x68D | 1677 | 8
+0x6B1 | 1713 | 8
+0x6BB | 1723 | 8 | Not available on the ASC port
+0x6CF | 1743 | 8
+0x6DF | 1759 | 8 | Not available on the DCM port
+0x6E1 | 1761 | 10
 0x6E2 | 1762 | 10
+0x6FB | 1787 | 10 | Not available on the ASC port
+0x6FC | 1788 | 100 | Not available on the ASC port
 
 ---
 
