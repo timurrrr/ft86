@@ -174,8 +174,17 @@ Brake pressure | `F * 128` | Coefficient taken from 1st gen cars, but might need
 
 *This channel is not available on the B_CAN which connects to the ASC unit.*
 
+Update frequency: 50 times per second.
+
+Example values:\
+`0x 4A 0F 00 00 00 00 00 00` (parked)\
+`0x 41 06 00 00 00 00 00 00` (parked)\
+`0x 56 CF 0D 7C C1 35 C8 05` (moving at ~6 mph according to the speedometer, turning right)\
+`0x FE 75 72 50 0E CC 79 39` (driving on a highway with 65 mph on the speedometer, straight line)
+
 Channel name | Equation | Notes
 ------------ | -------- | -----
+??? | bitsToUIntLe(raw, 0, 12) | Constantly changing even when parked, perhaps some counter?
 Wheel speed FL | `bitsToUIntLe(raw, 12, 13) * 0.015694` | Use same multiplier as for speed in 0x139
 Wheel speed FR | `bitsToUIntLe(raw, 25, 13) * 0.015694` | Use same multiplier as for speed in 0x139
 Wheel speed RL | `bitsToUIntLe(raw, 38, 13) * 0.015694` | Use same multiplier as for speed in 0x139
@@ -258,6 +267,14 @@ Update frequency: 10 times per second.
 Channel name | Equation | Notes
 ------------ | -------- | -----
 Air Temperature | `E / 2 - 40` |
+
+### CAN ID 0x393 (915)
+
+Update frequency: 10 times per second.
+
+Channel name | Equation | Notes
+------------ | -------- | -----
+Fuel level (%) | `100 - (bitsToUIntLe(raw, 32, 10) / 10.23)` | Unfiltered/noisy. The equation is work in prorgess.
 
 ### CAN ID 0x6E2 (1762)
 
