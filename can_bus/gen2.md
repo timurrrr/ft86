@@ -119,8 +119,8 @@ Channel name | Equation | Notes
 ------------ | -------- | -----
 Engine RPM | `bitsToUIntLe(raw, 16, 14)` |
 Accelerator position | `E / 2.55` |
-Accelerator position | `F / 2.55` | Seems to always have the same value as `E`
-Accelerator position | `G / 2.55` | Seems to always have the same value as `E`
+Accelerator position | `F / 2.55` | Same value as `E`, until you press and hold both accelerator and brake, then 0.
+Accelerator position | `G / 2.55` | Same as `F`.
 ??? | `H & 0xC0` | `0xC0` when off the accelerator pedal, `0x00` otherwise.
 
 ### CAN ID 0x41 (65)
