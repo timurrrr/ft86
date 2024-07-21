@@ -33,6 +33,9 @@ doable, take your time!
 <img src="../images/gr86_dcm_connector.png"
   alt="A look at of the DCM connector" width="500" height="342" />
 
+You can buy a DCM/OBD adapter [from Hachi Electronics](https://hachielectronics.com/products/2022-gr86-brz-asc-can-adapter?variant=49925762810145).
+
+Alternatively, you can make your own harness.
 You can use the two middle pins of a
 [Toyota radio harness](https://www.amazon.com/gp/product/B0002BEQJ8)
 to connect to the CAN bus through that connector.\
@@ -40,6 +43,8 @@ Here are the pins that you need to use:
 
 <img src="../images/ft86_socket_wiring.jpg"
   alt="Male connector wiring" width="512" height="384" />
+
+The green wire on the photo is CAN H, the white wire is CAN L.
 
 ### ASC port
 
@@ -56,8 +61,10 @@ of the photo:
   alt="Location of the ASC connector" width="500" height="500" />
 
 You can buy an off-the-shelf harness that taps into the ASC connector and
-provides access to the CAN bus in an OBD-II form factor:\
-https://ansixauto.com/2022-brz-gt86-can-adapter/
+provides access to the CAN bus in an OBD-II form factor:
+
+* https://hachielectronics.com/products/2022-gr86-brz-asc-can-adapter
+* https://ansixauto.com/2022-brz-gt86-can-adapter (has an option to pass through the ASC connections)
 
 Alternatively, you can make your own connector.
 You can then buy a male connector by TE Connectivity, part number 1376106-1.
