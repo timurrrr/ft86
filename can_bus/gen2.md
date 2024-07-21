@@ -19,10 +19,10 @@ and cons. Below are the recommended ones:
 
 ### DCM Connector
 
-**Only available on GR86s.** (Subaru, get your act together?)
+**Not available on US market Subaru BRZs.** (Subaru, get your act together?)
 
-GR86s have an unused connector hidden behind the glovebox, near the cabin air
-filter and the 12V socket:
+GR86s and EU market BRZs have an unused connector hidden behind the glovebox,
+near the cabin air filter and the 12V socket:
 
 <img src="../images/gr86_hidden_connector.png"
   alt="Location of the DCM connector" width="500" height="342" />
@@ -43,7 +43,7 @@ Here are the pins that you need to use:
 
 ### ASC port
 
-**This is only recommended for BRZ owners, as it lacks some important channels.**
+**This is only recommended for US BRZ owners, as it lacks some data.**
 
 A common place to get access to the CAN bus is the ASC (a.k.a. "fake engine
 noise") female connector. It is located inside the dash slightly to the right of
