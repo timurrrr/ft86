@@ -85,7 +85,10 @@ Here's how you should wire the male connector:
 
 The blue wire on this photo is CAN H, the white wire is CAN L.
 
-TODO: document which pins are ACC 12V and GND.
+The full pinout of the ASC connector is here (with colors matching OEM wire colors):
+
+<img src="../images/gen2_asc_connector_pinout.png"
+  alt="ASC connector pinout" width="500" height="115" />
 
 ## Details on some CAN IDs
 
