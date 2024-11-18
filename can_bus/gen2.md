@@ -180,6 +180,13 @@ Speed | `bitsToUIntLe(raw, 16, 13) * 0.015694` | You may want to check the multi
 Brake lights switch | `(E & 0x4)` | `4` is on, `0` is off
 Brake pressure | `F * 128` | Coefficient taken from 1st gen cars, but might need to be verified.
 
+When using RaceChrono, you might also consider the following interpretation of the `F` byte:
+
+Channel name | Equation | Notes
+------------ | -------- | -----
+Brake position (%) | `min(F / 0.7, 100)` | The 0.7 divider seems to be a good value to get 100% at pressure slightly higher than those you're likely to use on the track for cars with no aero. You can use 0.8 or 0.9 if you see 100% too often.
+
+
 ### CAN ID 0x13A (314)
 
 *This channel is not available on the B_CAN which connects to the ASC unit.*
