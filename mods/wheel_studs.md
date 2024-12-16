@@ -18,12 +18,13 @@ ARP also provides the following extended studs:
 Due to the extra length and an acorn tip it's typically necessary to use open
 ended lug nuts with these studs.
 
-An untested but promising alternative is "Eibach PRO-SPACER Kit 5x100 10mm" kit
-that comes with OEM-style wheel studs that are ~8 mm more thread than OEM. Those
-studs are designed to be used with the spacers that they come with, and will
-likely bottom out the OEM lug nuts when used without the spacers. However, it
-appears that with deeper closed end lug nuts such as Muteki 41885C you should
-still be able to use these studs even without spacers. (Of course there's no
-issue with open ended lug nuts). So a possible strategy is to get deep lug nuts,
-ARP 100-7727 for the rear hubs, and this Eibach kit for the front if you only
-ever want to run spacers no thicker than 10 mm.
+An untested but promising alternative is a
+`Eibach PRO-SPACER Kit 5x100 10mm S90-6-10-003` kit that comes with OEM-style
+wheel studs that are ~8 mm more thread than OEM. Those studs are designed to be
+used with the spacers that they come with, and will likely bottom out the OEM
+lug nuts when used without the spacers. However, it appears that with deeper
+closed end lug nuts such as Muteki 41885C you should still be able to use these
+studs even without spacers. (Of course there's no issue with open ended lug
+nuts). So a possible strategy is to get deep lug nuts, ARP 100-7727 for the rear
+hubs, and this Eibach kit for the front if you only ever want to run spacers no
+thicker than 10 mm.
