@@ -297,11 +297,16 @@ Fuel level (%) | `100 - (bitsToUIntLe(raw, 32, 10) / 10.23)` | Unfiltered/noisy.
 
 Update frequency: 1 per second.
 
+The encoding for tire pressures depends on the units used by the gauge cluster.
+Please let me know if you find more examples from cars that use other encondings! 
+
+#### US market cars (psi)
+
 Example values (from a US car):\
 `0x 00 00 04 FE FE FE FE FE` (when pressures aren't displayed shortly after turning ignition on)\
-`0x 00 00 04 48 42 46 44 FE` (tire pressures in psi: 36 FL, 33 FR, 35 RL, 34 RR)\
-`0x 00 00 24 4E 50 39 4E FE` (tire pressures in psi: 39 FL, 40 FR, 28 RL, 39 RR; RL highlighted yellow, TPMS light on)\
-`0x 00 00 24 37 35 48 46 FE` (tire pressures in psi: 27 FL, 26 FR, 36 RL, 35 RR; FL and FR highlighted yellow, TPMS light on)
+`0x 00 00 04 48 42 46 44 FE` (tire pressures displayed in the gauge cluster: 36 FL, 33 FR, 35 RL, 34 RR)\
+`0x 00 00 24 4E 50 39 4E FE` (tire pressures: 39 FL, 40 FR, 28 RL, 39 RR; RL highlighted yellow, TPMS light on)\
+`0x 00 00 24 37 35 48 46 FE` (tire pressures: 27 FL, 26 FR, 36 RL, 35 RR; FL and FR highlighted yellow, TPMS light on)
 
 Channel name | Equation | Notes
 ------------ | -------- | -----
@@ -315,13 +320,27 @@ Low pressure FR | `E & 1` | Ditto
 Low pressure RL | `F & 1` | Ditto
 Low pressure RR | `G & 1` | Ditto
 
-Based on my limited testing, the order of tires matches how the pressures are displayed
+Based on my testing, the order of tires matches how the pressures are displayed
 in the gauge cluster, i.e. correctly account for tire rotation, etc.
 
-These values were read from a US market car where pressures are displayed in psi.
-I suspect that cars on other markets (using bar or kPa) will use a different scale
-in the data encoding. Please let me know if you find any data examples from non-US
-cars and I'll add them here! 
+#### Cars that use bars for tire pressure (e.g. EU market)
+
+Example values:\
+`0x 00 00 08 FE FE FE FE FE` (when pressures aren't displayed shortly after turning ignition on)\
+`0x 00 00 08 2E 2C 2E 2C FE` (tire pressures displayed in the gauge cluster: 2.3 FL, 2.2 FR, 2.3 RL, 2.2 RR)\
+`0x 00 00 28 03 2C 2C 2C FE` (tire pressures displayed in the gauge cluster: 0.1 FL, 2.2 FR, 2.2 RL, 2.2 RR; FL highlighted yellow, TPMS light on)
+
+Channel name | Equation | Notes
+------------ | -------- | -----
+Tire pressure FL | `lowPass(D >> 1, 126) * 10` | Result is in kPa (as RaceChrono expects)
+Tire pressure FR | `lowPass(E >> 1, 126) * 10` | Ditto
+Tire pressure RL | `lowPass(F >> 1, 126) * 10` | Ditto
+Tire pressure RR | `lowPass(G >> 1, 126) * 10` | Ditto
+TPMS light on | `(C >> 5) & 1` |
+Low pressure FL | `D & 1` | The FL tire pressure is shown in yellow when this bit is set
+Low pressure FR | `E & 1` | Ditto
+Low pressure RL | `F & 1` | Ditto
+Low pressure RR | `G & 1` | Ditto
 
 ### Typical histogram of CAN IDs
 
