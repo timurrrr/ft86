@@ -35,6 +35,8 @@ your 86/BRZ/FR-S, unless you plan to drive 50 mph the whole day.
 * Brake pads
   * Factory brake pads are not designed for high temperatures either, even the
     ones that come in the Performance Package. Ask me how I know...
+  * Overheated pads can both wear faster and fade faster. If your pads are prone
+    to overheating, cooldown laps are recommended.
   * For God's sake, don't listen to Miata people who say you can use Hawk
     HPS/HP+. Miatas are ligher and slower. "Oh no what has happened to my brake
     rotors" and "why did the brake pad fall apart" complaints pop up ~weekly in
