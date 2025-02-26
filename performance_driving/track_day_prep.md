@@ -43,15 +43,14 @@ your 86/BRZ/FR-S, unless you plan to drive 50 mph the whole day.
     Other than the dust, it is ok for street driving. Most beginners go fast
     enough to start overheating DS2500 in just a few track days, so it's only
     good for beginners. Consider this a street pad.
-  * The **only** pad that I know that is good for street driving and performs
-    reasonably well for light to moderate track days is CSG CP. It's pricey but
-    lasts a long time. That being said, some people reported issues overheating
-    these pads.
+  * A few pads that can work well both for street driving and track driving
+    are Endless MX72, MX72+, and CSG CP.
   * Brake pads wear much faster when they are hot. If using street or "hybrid"
     pads, consider driving some laps during a session slower to let the heat
     out of the brakes between the laps you drive at full pace. Also consider
     cooling down on the last one or two laps of a session. Minimize usage of the
     brakes during those cooldown laps, and use as much engine braking as practical.
+  * Hard braking with a lot of ABS activation is also known to accelerate pad wear.
   * If you're sure that you're going to do more than 5 track days, invest into a
     set of dedicated track pads. They will last a long time and minimize the
     risk of rotor-related issues. Put the track pads in before the track day,
