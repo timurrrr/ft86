@@ -8,14 +8,19 @@ FMSI D numbers | D1539  | D1124
 
 ## Front brake rotors
 
+Compatible rotors:
+
+* Centric Premium 120.47021
+
 **TODO:** Fill out.
 
 ## Rear brake rotors
 
-**TODO:** Fill out.
-
 Compatible rotors:
+
 * Centric Premium 120.47031
+
+**TODO:** Fill out.
 
 ## Front brakes torque specs
 
@@ -32,6 +37,7 @@ Might need a crow foot to tighten the top bolts with a torque wrench.
 
 Brake hose bracket bolt: 12 mm, 24.3 ft•lbs.
 
-Caliper bracket bolts: 17 mm, 81.1 ft•lbs.
+Caliper bracket bolts: 17 mm, 81.1 ft•lbs.\
+*TODO:* This torque spec might be different among different models/generations.
 
 Bleeder valve: 10 mm, 5.9 ft•lbs.
