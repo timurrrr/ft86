@@ -128,6 +128,7 @@ Example values:\
 Channel name | Equation | Notes
 ------------ | -------- | -----
 Engine RPM | `bitsToUIntLe(raw, 16, 14)` |
+Neutral gear | `D & 0x80` |Bit `7` is set (aka, `0x80`) when gear is at neutral.
 Accelerator position | `E / 2.55` |
 Accelerator position | `F / 2.55` | Same value as `E`, until you press and hold both accelerator and brake, then 0.
 Accelerator position | `G / 2.55` | Same as `F`.
@@ -251,6 +252,12 @@ Example values:\
 `0x 7C 1B CE 42 09 01 00 00` (parked)\
 `0x 19 11 68 48 11 00 00 00` (moving slowly)
 
+### CAN ID 0x228 (552)
+
+| Channel name | Equation   | Notes                                  |
+| ------------ | ---------- | -------------------------------------- |
+| Reverse gear | `C & 0x01` | Bit `0` is set when gear is at reverse |
+
 ### CAN ID 0x241 (577)
 
 Update frequency: 20 times per second.
@@ -342,6 +349,17 @@ Low pressure FR | `E & 1` | Ditto
 Low pressure RL | `F & 1` | Ditto
 Low pressure RR | `G & 1` | Ditto
 
+#### Cars that use kPa for tire pressure (e.g. CN market)
+
+Other values are as the same as above.
+
+| Channel name     | Equation                         | Notes            |
+| ---------------- | -------------------------------- | ---------------- |
+| Tire pressure FL | `lowPass(D >> 1, 126) * 10 / 2`  | Result is in kPa |
+| Tire pressure FR | `lowPass(E >> 1, 126) * 10 / 2 ` | Ditto            |
+| Tire pressure RL | `lowPass(F >> 1, 126) * 10 / 2`  | Ditto            |
+| Tire pressure RR | `lowPass(G >> 1, 126) * 10 / 2`  | Ditto            |
+
 ### Typical histogram of CAN IDs
 
 Here's what the distribution of CAN IDs looks like in the CAN bus while idling in a
@@ -403,5 +421,5 @@ parking lot for 10 seconds after driving for 10+ minutes:
 ---
 
 If you found this page useful, consider donating so I can buy some beer/boba:
- 
+
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate?business=ZKULAWZFJKCES&item_name=Donation+to+support+the+ft86+project+on+GitHub+(from+the+gen2+CAN+bus+page)&currency_code=USD)
