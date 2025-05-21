@@ -165,6 +165,7 @@ the car/components/consumables, but aren't strictily required.
   * For gen2 cars, you will also need something like an Ansix ASC harness to be
     able to get the same information using an OBDLink MX+.
     See further pointers [here](https://github.com/timurrrr/RaceChronoDiyBleDevice/blob/master/can_db/ft86_gen2.md).
+    * Alternatively, you can use [Hachi Electronics' ASC harness with DauntlessOBD](https://hachielectronics.com/products/dauntlessobd-enhanced-can-adapter) which adds handful functionalities like auto door lock/unlock, remote window control, and Eyesight/TPMS disable on top of the data logging.
   * Android only: you may be able to save some money by using OBDLink LX. **OBDLink
     LX will not work with iOS!**
 

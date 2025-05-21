@@ -63,7 +63,8 @@ of the photo:
 You can buy an off-the-shelf harness that taps into the ASC connector and
 provides access to the CAN bus in an OBD-II form factor:
 
-* https://hachielectronics.com/products/2022-gr86-brz-asc-can-adapter
+* https://hachielectronics.com/products/2022-gr86-brz-asc-can-adapter (has an option to pass through the ASC connections and adding power connector to dash cams)
+* https://hachielectronics.com/products/dauntlessobd-enhanced-can-adapter (same connector as above, with DauntlessOBD bundled)
 * https://ansixauto.com/2022-brz-gt86-can-adapter (has an option to pass through the ASC connections)
 
 Alternatively, you can make your own connector.
@@ -89,6 +90,23 @@ The full pinout of the ASC connector is here (with colors matching OEM wire colo
 
 <img src="../images/gen2_asc_connector_pinout.png"
   alt="ASC connector pinout" width="500" height="115" />
+
+## Setting Up RaceChrono
+
+After connecting your OBD device to the CAN bus connector and pairing up with you phone, you need to add the data channels to RaceChrono manually in order to record the correct data.
+
+1. In RaceChrono, click the gear button to open settings.
+2. Scroll down to "Other devices", click add.
+3. Select the device you use. For DauntlessOBD, select "OBDLink CX Bluetooth LE (CAN-Bus)".
+4. Scroll to the top "Vehicle profiles", click your car.
+5. Scroll down to the bottom "CAN-Bus settings", enable "Test connection" to connect to your device, then click "Add channel".
+6. Put in the Channel, CAN ID, and equation like: (See below details for each channel settings, there is a simpler version in https://github.com/timurrrr/RaceChronoDiyBleDevice/blob/master/can_db/ft86_gen2.md)
+
+<img src="../images/racechrono_add_channel.png" alt="RaceChrono add channel" width="380"  height="500" />
+
+7. You should be able to see the live data if you connected to your device and enabled test connection. Save and repeat to add all the data you need.
+8. After you have logged a session, click the lap in the session record, you can click the gear buttons top right to the video/graph to add the data channel you added above.
+
 
 ## Details on some CAN IDs
 
