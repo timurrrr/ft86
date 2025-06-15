@@ -128,7 +128,7 @@ Example values:\
 Channel name | Equation | Notes
 ------------ | -------- | -----
 Engine RPM | `bitsToUIntLe(raw, 16, 14)` |
-Neutral gear | `D & 0x80` |Bit `7` is set (aka, `0x80`) when gear is at neutral.
+Neutral gear | `D & 0x80` | `0x80` when transmission is in neutral.
 Accelerator position | `E / 2.55` |
 Accelerator position | `F / 2.55` | Same value as `E`, until you press and hold both accelerator and brake, then 0.
 Accelerator position | `G / 2.55` | Same as `F`.
@@ -254,9 +254,9 @@ Example values:\
 
 ### CAN ID 0x228 (552)
 
-| Channel name | Equation   | Notes                                  |
-| ------------ | ---------- | -------------------------------------- |
-| Reverse gear | `C & 0x01` | Bit `0` is set when gear is at reverse |
+| Channel name | Equation   | Notes
+| ------------ | ---------- | -----------------------------------
+| Reverse gear | `C & 0x01` | `1` when transmission is in reverse
 
 ### CAN ID 0x241 (577)
 
@@ -305,7 +305,17 @@ Fuel level (%) | `100 - (bitsToUIntLe(raw, 32, 10) / 10.23)` | Unfiltered/noisy.
 Update frequency: 1 per second.
 
 The encoding for tire pressures depends on the units used by the gauge cluster.
-Please let me know if you find more examples from cars that use other encondings! 
+Please let me know if you find more examples from cars that use other encondings!
+
+#### All markets
+
+Channel name | Equation | Notes
+------------ | -------- | -----
+TPMS light on | `(C >> 5) & 1` |
+Low pressure FL | `D & 1` | The FL tire pressure is shown in yellow when this bit is set
+Low pressure FR | `E & 1` | Ditto
+Low pressure RL | `F & 1` | Ditto
+Low pressure RR | `G & 1` | Ditto
 
 #### US market cars (psi)
 
@@ -321,11 +331,6 @@ Tire pressure FL | `lowPass(D >> 1, 126) * 6.8948` | Result is in kPa (as RaceCh
 Tire pressure FR | `lowPass(E >> 1, 126) * 6.8948` | Ditto
 Tire pressure RL | `lowPass(F >> 1, 126) * 6.8948` | Ditto
 Tire pressure RR | `lowPass(G >> 1, 126) * 6.8948` | Ditto
-TPMS light on | `(C >> 5) & 1` |
-Low pressure FL | `D & 1` | The FL tire pressure is shown in yellow when this bit is set
-Low pressure FR | `E & 1` | Ditto
-Low pressure RL | `F & 1` | Ditto
-Low pressure RR | `G & 1` | Ditto
 
 Based on my testing, the order of tires matches how the pressures are displayed
 in the gauge cluster, i.e. correctly account for tire rotation, etc.
@@ -343,22 +348,15 @@ Tire pressure FL | `lowPass(D >> 1, 126) * 10` | Result is in kPa (as RaceChrono
 Tire pressure FR | `lowPass(E >> 1, 126) * 10` | Ditto
 Tire pressure RL | `lowPass(F >> 1, 126) * 10` | Ditto
 Tire pressure RR | `lowPass(G >> 1, 126) * 10` | Ditto
-TPMS light on | `(C >> 5) & 1` |
-Low pressure FL | `D & 1` | The FL tire pressure is shown in yellow when this bit is set
-Low pressure FR | `E & 1` | Ditto
-Low pressure RL | `F & 1` | Ditto
-Low pressure RR | `G & 1` | Ditto
 
 #### Cars that use kPa for tire pressure (e.g. CN market)
 
-Other values are as the same as above.
-
-| Channel name     | Equation                         | Notes            |
-| ---------------- | -------------------------------- | ---------------- |
-| Tire pressure FL | `lowPass(D >> 1, 126) * 10 / 2`  | Result is in kPa |
-| Tire pressure FR | `lowPass(E >> 1, 126) * 10 / 2 ` | Ditto            |
-| Tire pressure RL | `lowPass(F >> 1, 126) * 10 / 2`  | Ditto            |
-| Tire pressure RR | `lowPass(G >> 1, 126) * 10 / 2`  | Ditto            |
+Channel name | Equation | Notes
+------------ | -------- | -----
+Tire pressure FL | `lowPass(D >> 1, 126) * 10 / 2`  | Result is in kPa (as RaceChrono expects)
+Tire pressure FR | `lowPass(E >> 1, 126) * 10 / 2 ` | Ditto
+Tire pressure RL | `lowPass(F >> 1, 126) * 10 / 2`  | Ditto
+Tire pressure RR | `lowPass(G >> 1, 126) * 10 / 2`  | Ditto
 
 ### Typical histogram of CAN IDs
 
