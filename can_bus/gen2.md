@@ -128,7 +128,7 @@ Example values:\
 Channel name | Equation | Notes
 ------------ | -------- | -----
 Engine RPM | `bitsToUIntLe(raw, 16, 14)` |
-Neutral gear | `D & 0x80` | `0x80` when transmission is in neutral.
+Neutral gear | `D & 0x80` | `0x80` when transmission is in neutral. (at least on MT cars)
 Accelerator position | `E / 2.55` |
 Accelerator position | `F / 2.55` | Same value as `E`, until you press and hold both accelerator and brake, then 0.
 Accelerator position | `G / 2.55` | Same as `F`.
@@ -256,7 +256,7 @@ Example values:\
 
 | Channel name | Equation   | Notes
 | ------------ | ---------- | -----------------------------------
-| Reverse gear | `C & 0x01` | `1` when transmission is in reverse
+| Reverse gear | `C & 0x01` | `1` when transmission is in reverse. (at least on MT cars)
 
 ### CAN ID 0x241 (577)
 
