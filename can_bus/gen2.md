@@ -128,7 +128,7 @@ Example values:\
 Channel name | Equation | Notes
 ------------ | -------- | -----
 Engine RPM | `bitsToUIntLe(raw, 16, 14)` |
-Neutral gear | `D & 0x80` | `0x80` when transmission is in neutral. (at least on MT cars)
+Neutral gear | `D & 0x80` | `0x80` when transmission is in neutral. Works for both MT and AT.
 Accelerator position | `E / 2.55` |
 Accelerator position | `F / 2.55` | Same value as `E`, until you press and hold both accelerator and brake, then 0.
 Accelerator position | `G / 2.55` | Same as `F`.
@@ -145,6 +145,32 @@ Example values:\
 Channel name | Equation | Notes
 ------------ | -------- | -----
 A/C fan clutch | `H & 0x2` | 2 is engaged, 0 is disengaged
+
+### CAN ID 0x48 (72)
+
+This channel only available on AT model.
+
+And it contains AT related data.
+
+Example values:\
+`40 46 36 49 40 ec 07 00` (S3)\
+`77 4f 27 51 40 20 08 00` (S4)\
+`ab 46 4a 99 2e 02 0a 00` (M3)\
+`d9 49 27 a1 4a 30 06 00` (M4)\
+`f8 49 8a 02 10 c8 03 00` (N)\
+`d9 4f 8a 04 10 a1 03 00` (P)\
+`b0 4b 7b 03 10 8d 02 00` (R)\
+
+| Channel name | Equation                                       | Notes                                                        |
+| ------------ | ---------------------------------------------- | ------------------------------------------------------------ |
+| N engaged    | `(D & 0x02) == 0x02`                           |                                                              |
+| P engaged    | `(D & 0x04) == 0x04`                           |                                                              |
+| R engaged    | `(D & 0x03) == 0x03`                           |                                                              |
+| D engaged    | `D == 0x79`                                    |                                                              |
+| M engaged    | `D & 0x80`                                     | Manual Mode.                                                 |
+| Gear (M)     | `if((D & 0x80), (D & 0x38 >> 3), NaN)`         | Mask 0x38 for gear under M mode.                             |
+| S engaged    | `(D & 0x03) == 0x01`                           | Sports Mode. Bit `0` flags sport mode.                       |
+| Gear (S)     | `if((D & 0x01), (((D & 0x78) >> 3) - 6), NaN)` | Mask 0x78 for gear under S mode, `- 6` to get actual gear position. |
 
 ### CAN ID 0x118 (280)
 
@@ -254,9 +280,9 @@ Example values:\
 
 ### CAN ID 0x228 (552)
 
-| Channel name | Equation   | Notes
-| ------------ | ---------- | -----------------------------------
-| Reverse gear | `C & 0x01` | `1` when transmission is in reverse. (at least on MT cars)
+| Channel name | Equation   | Notes|
+| ------------ | ---------- | -----------------------------------|
+| Reverse gear | `C & 0x01` | `1` when transmission is in reverse. Works for both MT and AT. |
 
 ### CAN ID 0x241 (577)
 
