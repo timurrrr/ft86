@@ -161,16 +161,16 @@ Example values:\
 `d9 4f 8a 04 10 a1 03 00` (P)\
 `b0 4b 7b 03 10 8d 02 00` (R)\
 
-| Channel name | Equation                                     | Notes                                                        |
-| ------------ | -------------------------------------------- | ------------------------------------------------------------ |
-| N engaged    | `(D & 0x02) == 0x02`                         |                                                              |
-| P engaged    | `(D & 0x04) == 0x04`                         |                                                              |
-| R engaged    | `(D & 0x03) == 0x03`                         |                                                              |
-| D engaged    | `D == 0x79`                                  |                                                              |
-| M engaged    | `D & 0x80`                                   | Manual Mode.                                                 |
-| Gear (M)     | if((D & 0x80), (D & 0x38 >> 3), NaN)         | Mask 0x38 for gear under M mode.                             |
-| S engaged    | `(D & 0x03) == 0x01`                         | Sports Mode. Bit `0` flags sport mode.                       |
-| Gear (S)     | if((D & 0x01), (((D & 0x78) >> 3) - 6), NaN) | Mask 0x78 for gear under S mode, `- 6` to get actual gear position. |
+| Channel name | Equation                                       | Notes                                                        |
+| ------------ | ---------------------------------------------- | ------------------------------------------------------------ |
+| N engaged    | `(D & 0x02) == 0x02`                           |                                                              |
+| P engaged    | `(D & 0x04) == 0x04`                           |                                                              |
+| R engaged    | `(D & 0x03) == 0x03`                           |                                                              |
+| D engaged    | `D == 0x79`                                    |                                                              |
+| M engaged    | `D & 0x80`                                     | Manual Mode.                                                 |
+| Gear (M)     | `if((D & 0x80), (D & 0x38 >> 3), NaN)`         | Mask 0x38 for gear under M mode.                             |
+| S engaged    | `(D & 0x03) == 0x01`                           | Sports Mode. Bit `0` flags sport mode.                       |
+| Gear (S)     | `if((D & 0x01), (((D & 0x78) >> 3) - 6), NaN)` | Mask 0x78 for gear under S mode, `- 6` to get actual gear position. |
 
 ### CAN ID 0x118 (280)
 
