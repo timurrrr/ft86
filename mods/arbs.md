@@ -43,7 +43,7 @@ Product name | Stiffness | Notes
 ------------ | --------- | ------
 Karcepts 0.095 in | 64–109 lbs/in | Uses Karcepts end links. Has 7 intermediate positions between the listed rates. Discontinued?
 Karcepts 0.120 in | 71–122 lbs/in | Uses Karcepts end links. Has 7 intermediate positions between the listed rates. Discontinued?
-[Mann Engineering 13 mm](https://www.mann-engineering.com/products/mann-engineering-rear-adjustable-swaybar) | 36%, 21% and 0% **softer** than OE 14 mm bar | Requires a spacer between the subframe and the bushings, likely won't work on gen2 BRZs. Numbers estimated based on leverage at different holes.
+[Mann Engineering 13 mm](https://www.mann-engineering.com/products/mann-engineering-rear-adjustable-swaybar) | 36%, 21% and 0% **softer** than OE 14 mm bar | Requires a spacer between the subframe and the bushings, likely won't work on gen2 BRZs. Numbers estimated based on leverage at different holes. Karcepts at some point claimed that it's actually 43 lb/in, 53 lb/in, and 75 lb/in.
 [Cusco 14 mm (965 311 B14)](https://www.rallysportdirect.com/products/cus-965-311-b14-cusco-rear-sway-bar) | 27% **softer** than OE 14 mm bar | IIRC the number came from a Cusco catalog.
 Karcepts Solid | 84–142 lbs/in | Uses Karcepts end links. Has 7 intermediate positions between the listed rates. Discontinued?
 OE 2013-2016 Gen 1 14 mm | ~113 lbs/in
