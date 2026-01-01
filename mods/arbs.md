@@ -52,6 +52,7 @@ OE 2017+ Gen 1 15 mm | ~140 lbs/in
 [Whiteline 16 mm](https://whitelineperformance.com/products/bsr53z-sway-bar) | 40%, 89% and 176% stiffer than OE 14 mm bar | Not sure where the numbers in my notes came from.
 [Cusco 16 mm (965 311 B16)](https://www.rallysportdirect.com/products/cus-965-311-b16-cusco-rear-sway-bar-16mm-subaru) | 68% stiffer than OE 14 mm bar | IIRC the number came from a Cusco catalog.
 [Blox Racing 17 mm](https://bloxracing.com/products/17mm-rear-sway-bar-kit-toyota-86-scion-fr-s-subaru-brz) | Not provided |
+[Pedders 17.5 mm](https://pedders.com/products/sportsryder-rear-sway-bar-subaru-brz-2013-present) | Not provided |
 [Whiteline 18 mm](https://whitelineperformance.com/products/bsr53xz-sway-bar) | 114%, 178% and 264% stiffer than OE 14 mm bar | Not sure where the numbers in my notes came from.
 [FactionFab 18 mm](https://www.factionfab.com/products/factionfab-sway-bar-2013-2021-brz-fr-s-86-18mm-rear) | Not provided | "does not fit 2nd gen BRZ"
 [SuperPro 18 mm](https://superprousa.com/products/rc0015rz-18-roll-control-sway-bar) | Not provided |
