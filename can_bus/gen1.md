@@ -156,7 +156,7 @@ Channel name | Equation | Notes
 Hand brake on | `(G & 8) / 8` |
 Brake pedal pressed | `(G & 16) / 16` |
 High beam on | `H & 0x10` |  
-Low beam on | `H & 0x8 |
+Low beam on | `H & 0x8` |
 Parking lights on | `H & 0x4` |
 DRL On | `H & 0x2` 
 
