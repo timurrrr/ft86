@@ -83,6 +83,18 @@ Speed | `bytesToIntLe(raw, 0, 2) * 0.015694` | May want to check the multiplier 
 Brake position | `min(C / 0.7, 100)` | The third byte is the pressure in the brake system, in Bars. The 0.7 divider seems to be a good value to get 100% at pressure slightly higher than those you're likely to use on the track for cars with no aero. You can use 0.8 or 0.9 if you see 100% too often.
 ??? | D | Always 0?
 
+
+### CAN ID 0xD3 (211)
+
+Update frequency: 50 times per second.
+Length: 4 bytes
+
+Channel name | Equation | Notes
+------------ | -------- | -----
+VSC Sport | `A & 0x8`  | 1 = VSC Sport On, 0 = VSC Sport Off (default)
+TC Off    | `A & 0x20` | 1 = TC Off, 0 = TC On (default)
+VSC Off   | `B & 0x10` | 1 = VSC Off, 0 = VSC On (default)
+
 ### CAN ID 0xD4 (212)
 
 Update frequency: 50 times per second.
@@ -143,6 +155,10 @@ Channel name | Equation | Notes
 ------------ | -------- | -----
 Hand brake on | `(G & 8) / 8` |
 Brake pedal pressed | `(G & 16) / 16` |
+High beam on | `H & 0x10` |  
+Low beam on | `H & 0x8` |
+Parking lights on | `H & 0x4` |
+DRL On | `H & 0x2` 
 
 ### CAN ID 0x282 (642)
 
