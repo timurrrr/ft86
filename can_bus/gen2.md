@@ -309,6 +309,16 @@ Channel name | Equation | Notes
 Engine oil temperature | `D - 40` |
 Coolant temperature | `E - 40` |
 
+### CAN ID 0x34A (837)
+
+This channel only available on AT model.
+
+Update frequency: 10 times per second.
+
+Channel name | Equation | Notes
+------------ | -------- | -----
+AT fluid temperature | `E - 40` | Inaccurate at low temperatures
+
 ### CAN ID 0x390 (912)
 
 Update frequency: 10 times per second.
