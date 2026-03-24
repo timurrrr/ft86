@@ -148,29 +148,28 @@ A/C fan clutch | `H & 0x2` | 2 is engaged, 0 is disengaged
 
 ### CAN ID 0x48 (72)
 
-This channel only available on AT model.
-
-And it contains AT related data.
+This channel only available on AT model and it contains data related to the transmission.
 
 Example values:\
+`d9 4f 8a 04 10 a1 03 00` (P)\
+`b0 4b 7b 03 10 8d 02 00` (R)\
+`f8 49 8a 02 10 c8 03 00` (N)\
 `40 46 36 49 40 ec 07 00` (S3)\
 `77 4f 27 51 40 20 08 00` (S4)\
 `ab 46 4a 99 2e 02 0a 00` (M3)\
-`d9 49 27 a1 4a 30 06 00` (M4)\
-`f8 49 8a 02 10 c8 03 00` (N)\
-`d9 4f 8a 04 10 a1 03 00` (P)\
-`b0 4b 7b 03 10 8d 02 00` (R)\
+`d9 49 27 a1 4a 30 06 00` (M4)
 
 | Channel name | Equation                                       | Notes                                                        |
 | ------------ | ---------------------------------------------- | ------------------------------------------------------------ |
-| N engaged    | `(D & 0x02) == 0x02`                           |                                                              |
 | P engaged    | `(D & 0x04) == 0x04`                           |                                                              |
 | R engaged    | `(D & 0x03) == 0x03`                           |                                                              |
+| N engaged    | `(D & 0x02) == 0x02`                           |                                                              |
 | D engaged    | `D == 0x79`                                    |                                                              |
+| Gear (M and S modes) | `if((D & 0x80), ((D & 0x38) >> 3), if(D == 0x79, NaN, if((D & 0x03) == 0x01, (((D & 0x78) >> 3) - 6), NaN)))` | Doesn't work in D (please send a PR if you figure out how to fix this!) |
 | M engaged    | `D & 0x80`                                     | Manual Mode.                                                 |
 | Gear (M)     | `if((D & 0x80), (D & 0x38 >> 3), NaN)`         | Mask 0x38 for gear under M mode.                             |
 | S engaged    | `(D & 0x03) == 0x01`                           | Sports Mode. Bit `0` flags sport mode.                       |
-| Gear (S)     | `if((D & 0x01), (((D & 0x78) >> 3) - 6), NaN)` | Mask 0x78 for gear under S mode, `- 6` to get actual gear position. |
+| Gear (S)     | `if((D & 0x03) == 0x01, (((D & 0x78) >> 3) - 6), NaN)` | Mask 0x78 for gear under S mode, `- 6` to get actual gear position. |
 
 ### CAN ID 0x118 (280)
 
