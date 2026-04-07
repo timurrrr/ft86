@@ -27,6 +27,7 @@ Compatible rotors:
 Size: 316x20 mm
 
 Compatible rotors:
+* Brembo 09.A198.21
 * Centric Premium 125.47043
 * DBA 42656S-10 rear
 * Girodisc A2-095
