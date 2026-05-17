@@ -317,7 +317,7 @@ Update frequency: 10 times per second.
 
 Channel name | Equation | Notes
 ------------ | -------- | -----
-AT fluid temperature | `E - 40` | Inaccurate at low temperatures
+AT fluid temperature | `E - 50` |
 
 ### CAN ID 0x390 (912)
 
